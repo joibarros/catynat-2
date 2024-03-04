@@ -1,0 +1,197 @@
+@charset "UTF-8";
+html {
+font-size: 62.5%;
+/*equivale a 1em*/ }                                                                   
+
+/*Reset*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Madimi One";
+}
+
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+/*Navbar*/
+
+
+nav ul li {
+    list-style: none;
+color: white;
+font-size: 1.6em;
+font-weight: 400;
+padding-left: 20px; }
+
+nav ul li a {
+text-decoration: none;
+color: white; }
+
+nav ul li a:hover {
+text-decoration: none;
+text-shadow: 2px 2px 9px #fff;
+color: white; }
+
+.globo p{
+  
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffff;
+  margin-left: 10px;
+}
+.globo {
+    position: absolute;
+    background-color: #ca9f67; /* Color de fondo del globo */
+    border-radius: 20px 30px 20px 20px; /* Radio de las esquinas redondeadas */
+    padding: 20px; /* Espaciado interno del globo */
+    width: 20vw ;/* Ancho máximo del globo */
+    height: 150px;
+    top: 70%;
+    right: 10%; /* Posición en el centro derecho de la imagen */
+    transform: translate(0, -50%); /* Centrar verticalmente */
+}
+
+.globo::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 70px 0 70px 70px;
+    border-color: transparent transparent transparent #ca9f67; /* Color del globo y el borde derecho transparente */
+    top: 5px;
+    left: -63px; /* Posición del triángulo */
+    transform: rotate(180deg);
+}
+
+/*Imagen de Portada*/
+.wallp-image{
+    background-image: url(../assets/img/gato\ portada.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.texto{
+    border-radius: 10px 10px 10px 10px solid #C09465;
+}
+.image-section{
+    background-image: url(../assets/img/gato\ 2da\ seccion.jpg);
+    width: 100%;
+    height: 110vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.txt_aboutus{
+  
+    font-size: 2.4rem;
+}
+.article{
+    max-width: 640px;
+    padding: 0 50px;
+    margin-left: 50px;
+}
+.title{
+    margin-bottom: 24px;
+    padding: 20px;
+    color:#C09465 ;
+    font-size: 5rem;
+}
+
+.subt-prod{
+    font-size: 2.5em;
+}
+.second-img{
+    width: fit-content;
+}
+.container-img{
+    max-width: 540px;
+}
+
+.content_txt{
+    font-size: 1.8rem;
+}
+.line-title {
+    position: absolute;
+    left: 15%;
+    bottom: 6px;
+    width: 100%; /* O el ancho deseado */
+    height: 40%; /* O el grosor deseado */
+    background-color:#C09465 ;
+}
+.line-bottom{
+    width: 100%; /* O el ancho deseado */
+    height: 8px; /* O el grosor deseado */
+    margin-bottom: 2rem;
+    background-color:#C09465 ;
+}
+.title-products {
+    
+    position: relative;
+    font-weight: bold;
+    z-index: 1; /* Asegura que el texto esté encima de la línea */
+    font-size: 5rem;
+
+}
+.premium{
+    color:#C09465 ;
+}
+
+.img-gra{
+    width: 300%;
+}
+
+                                                    /*Media Queries*/
+/*Media Queries perteneciente a 2da seccion - cambio de imagen horizontal a vertical.*/
+@media screen and (max-width:1024px) {
+    .image-section{
+        background-image: url(../assets/img/gato\ 2da\ seccion\ mobile.jpg);
+        height: 200vh;
+        align-items: flex-start;
+    }
+    .article{
+        justify-content: center;
+        align-items: start;
+        margin-left: 0;
+    } 
+    .title{
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .media{
+        order: 2;
+    }
+}
+@media screen and (max-width:468px) {
+    .article{
+        padding: 24px 20px 0 15px;
+    }
+    .title-products{
+        font-size: 1.5rem ;
+    }
+    .title-second{
+
+        font-size: 1.6rem;    }
+    .premium{   
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width:320px) {
+    .title{
+        font-size: 24px;
+    }
+    .line-title{
+        max-width: 200px;
+    }
+}
